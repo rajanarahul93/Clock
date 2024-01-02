@@ -4,11 +4,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-<<<<<<< HEAD
-    background: linear-gradient(135deg, #3498db, #3498db 20%, #8c40ad 20%, #8e44ad 40%, #e74c3c 40%, #e74c3c 60%, #2ecc71 60%, #2ecc71 80%, #f39c12 80%, #f39c12);
-=======
     background: linear-gradient(135deg, #3498db, #3498db 20%, #8e44ad 20%, #8e44ad 40%, #e74c3c 40%, #e74c3c 60%, #2ecc71 60%, #2ecc71 80%, #f39c12 80%, #f39c12);
->>>>>>> bdee5a1507fb6deb20d797d143924a43707c114c
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
     font-family: 'Arial', sans-serif;
@@ -41,15 +37,15 @@ body::before {
     z-index: -1;
 }
 
-.clock {
+.clock-1 {
     position: relative;
     width: 300px;
     height: 300px;
-    border: 10px solid #3498db; 
+    border: 10px solid #318bc6;
     border-radius: 50%;
-    background: radial-gradient(circle, #fff, #eee); 
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
-    overflow: hidden; 
+    background: radial-gradient(circle, #fff, #ffffff);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .clock-face {
@@ -65,7 +61,7 @@ body::before {
 
 .hour-hand, .minute-hand, .second-hand {
     position: absolute;
-    background-color: #3498db; 
+    background-color: #3498db;
     transform-origin: 50% 100%;
 }
 
@@ -106,7 +102,7 @@ body::before {
 }
 
 .hour-hand, .minute-hand, .second-hand {
-    background: linear-gradient(90deg, #3498db, #26597d);
+    background: linear-gradient(90deg, #43a6e7, #23577b);
 }
 
 .clock-face::before {
@@ -114,7 +110,7 @@ body::before {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0), #fff 30%, #fff);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0), #f5f0f0 30%, #ededed);
     border-radius: 50%;
     animation: pulse 2s ease-in-out infinite;
 }
