@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #3498db, #3498db 20%, #8e44ad 20%, #8e44ad 40%, #e74c3c 40%, #e74c3c 60%, #2ecc71 60%, #2ecc71 80%, #f39c12 80%, #f39c12);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+    background-size: 20px 20px;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 10px solid #3498db; 
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff, #eee); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+}
+
+.clock-face {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hour-hand, .minute-hand, .second-hand {
+    position: absolute;
+    background-color: #3498db; 
+    transform-origin: 50% 100%;
+}
+
+.hour-hand {
+    width: 10px;
+    height: 80px;
+    top: 22.5%;
+    left: 49%;
+    transform: translate(-50%, -100%) rotate(90deg);
+    animation: rotate 12s linear infinite;
+}
+
+.minute-hand {
+    width: 8px;
+    height: 120px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(90deg);
+    animation: rotate 60s linear infinite;
+}
+
+.second-hand {
+    width: 4px;
+    height: 140px;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(90deg);
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hour-hand, .minute-hand, .second-hand {
+    background: linear-gradient(90deg, #3498db, #26597d);
+}
+
+.clock-face::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0), #fff 30%, #fff);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
