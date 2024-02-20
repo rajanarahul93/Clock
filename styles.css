@@ -4,7 +4,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #3498db, #3498db 20%, #8e44ad 20%, #8e44ad 40%, #e74c3c 40%, #e74c3c 60%, #2ecc71 60%, #2ecc71 80%, #f39c12 80%, #f39c12);
+    background: linear-gradient(135deg, #2e87c2, #3498db 20%, #8e44ad 20%, #8e44ad 40%, #e74c3c 40%, #e74c3c 60%, #2ecc71 60%, #2ecc71 80%, #f39c12 80%, #f39c12);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
     font-family: 'Arial', sans-serif;
